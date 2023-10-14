@@ -1,0 +1,33 @@
+{
+    "configen": {
+        "version": "4",
+        "sources": [
+            {
+                "id": "lib",
+                "path": "src/lib",
+                "r": true
+            },
+            {
+                "id": "test",
+                "path": "src/test",
+                "r": true
+            }
+        ],
+        "destinations": [
+            {
+                "id": "lib",
+                "path": "gen/gen4lib",
+                "sources": [
+                    "lib"
+                ]
+            },
+            {
+                "id": "test",
+                "path": "gen/gen4test",
+                "sources": [
+                    "test"
+                ]
+            }
+        ]
+    }
+}
