@@ -30,6 +30,7 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
+    inst.register(&pe547391eb9_golang_TestClasses{})
     inst.register(&pe547391eb9_golang_Tester{})
 
 

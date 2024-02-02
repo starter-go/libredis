@@ -32,6 +32,6 @@ func (inst *Tester) run() error {
 		return err
 	}
 
-	client := src.Client(nil)
-	return client.Ping()
+	client := src.Client()
+	return client.Ping(nil)
 }

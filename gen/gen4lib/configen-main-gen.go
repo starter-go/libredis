@@ -30,9 +30,11 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
+    inst.register(&p3c2ff7f68e_lib_ClassManagerImpl{})
     inst.register(&p3c2ff7f68e_lib_DefaultSourceFactory{})
     inst.register(&p3c2ff7f68e_lib_DefaultSourceManager{})
     inst.register(&p3c2ff7f68e_lib_DefaultSourceRegistry{})
+    inst.register(&p3c2ff7f68e_lib_ServiceImpl{})
 
 
     return nil

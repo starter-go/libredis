@@ -1,6 +1,7 @@
 package lib
 
 import (
+	"context"
 	"strconv"
 	"time"
 
@@ -62,8 +63,9 @@ func (inst *DefaultSourceFactory) Open(cfg *libredis.Configuration) (libredis.So
 		client:        rawClient,
 		defaultMaxAge: maxAge,
 	}
-	c := s.Client(nil)
-	err := c.Ping()
+	ctx := context.Background()
+	c := s.Client()
+	err := c.Ping(ctx)
 	if err != nil {
 		return nil, err
 	}

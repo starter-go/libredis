@@ -1,7 +1,5 @@
 package libredis
 
-import "context"
-
 // 一些预定义的数据源名称
 const (
 	SourceDefault = ""
@@ -21,7 +19,7 @@ type Configuration struct {
 
 // Source 数据源
 type Source interface {
-	Client(c context.Context) Client
+	Client() Client
 }
 
 // SourceFactory 数据源工厂

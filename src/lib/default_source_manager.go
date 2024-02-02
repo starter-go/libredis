@@ -1,6 +1,7 @@
 package lib
 
 import (
+	"context"
 	"fmt"
 
 	"github.com/starter-go/application"
@@ -69,8 +70,9 @@ func (inst *DefaultSourceManager) loadSource(reg *libredis.SourceRegistration) e
 		reg.Source = src1
 	}
 
-	client := src.Client(nil)
-	return client.Ping()
+	ctx := context.Background()
+	client := src.Client()
+	return client.Ping(ctx)
 }
 
 func (inst *DefaultSourceManager) listAll() ([]*libredis.SourceRegistration, error) {
