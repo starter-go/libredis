@@ -9,8 +9,8 @@ import (
 
 const (
 	theModuleName    = "github.com/starter-go/libredis"
-	theModuleVer     = "v0.0.2"
-	theModuleRev     = 3
+	theModuleVer     = "v0.0.3"
+	theModuleRev     = 4
 	theModuleResPath = "src/lib/resources"
 )
 
