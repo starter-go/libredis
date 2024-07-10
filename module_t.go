@@ -8,8 +8,8 @@ import (
 
 const (
 	theModuleName = "github.com/starter-go/libredis"
-	theModuleVer  = "v0.0.3"
-	theModuleRev  = 4
+	theModuleVer  = "v0.0.4"
+	theModuleRev  = 5
 )
 
 ////////////////////////////////////////////////////////////////////////////////
