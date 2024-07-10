@@ -4,29 +4,49 @@ import (
 	"embed"
 
 	"github.com/starter-go/application"
-	"github.com/starter-go/starter"
 )
 
 const (
-	theModuleName    = "github.com/starter-go/libredis"
-	theModuleVer     = "v0.0.3"
-	theModuleRev     = 4
-	theModuleResPath = "src/lib/resources"
+	theModuleName = "github.com/starter-go/libredis"
+	theModuleVer  = "v0.0.3"
+	theModuleRev  = 4
 )
 
-//go:embed "src/lib/resources"
-var theModuleResFS embed.FS
+////////////////////////////////////////////////////////////////////////////////
 
-// ModuleT module template for []
-func ModuleT() *application.ModuleBuilder {
+const (
+	theLibModuleResPath  = "src/main/resources"
+	theTestModuleResPath = "src/test/resources"
+)
+
+//go:embed "src/main/resources"
+var theLibModuleResFS embed.FS
+
+//go:embed "src/test/resources"
+var theTestModuleResFS embed.FS
+
+////////////////////////////////////////////////////////////////////////////////
+
+// NewModuleForLib module template for []
+func NewModuleForLib() *application.ModuleBuilder {
 
 	mb := &application.ModuleBuilder{}
-	mb.Name(theModuleName)
+	mb.Name(theModuleName + "#lib")
 	mb.Version(theModuleVer)
 	mb.Revision(theModuleRev)
-	mb.EmbedResources(theModuleResFS, theModuleResPath)
-
-	mb.Depend(starter.Module())
-
+	mb.EmbedResources(theLibModuleResFS, theLibModuleResPath)
 	return mb
 }
+
+// NewModuleForTest module template for []
+func NewModuleForTest() *application.ModuleBuilder {
+
+	mb := &application.ModuleBuilder{}
+	mb.Name(theModuleName + "#test")
+	mb.Version(theModuleVer)
+	mb.Revision(theModuleRev)
+	mb.EmbedResources(theTestModuleResFS, theTestModuleResPath)
+	return mb
+}
+
+////////////////////////////////////////////////////////////////////////////////

@@ -1,4 +1,4 @@
-package gen4lib
+package test4libredis
 
 import "github.com/starter-go/application"
 
@@ -30,11 +30,7 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
-    inst.register(&p3c2ff7f68e_lib_ClassManagerImpl{})
-    inst.register(&p3c2ff7f68e_lib_DefaultSourceFactory{})
-    inst.register(&p3c2ff7f68e_lib_DefaultSourceManager{})
-    inst.register(&p3c2ff7f68e_lib_DefaultSourceRegistry{})
-    inst.register(&p3c2ff7f68e_lib_ServiceImpl{})
+    inst.register(&p19ce636756_cases_TestCrud{})
 
 
     return nil

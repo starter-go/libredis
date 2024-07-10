@@ -1,4 +1,4 @@
-package gen4lib
+package lib4libredis
 
 import "github.com/starter-go/application"
 

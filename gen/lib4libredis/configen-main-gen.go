@@ -1,4 +1,4 @@
-package gen4test
+package lib4libredis
 
 import "github.com/starter-go/application"
 
@@ -30,8 +30,7 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
-    inst.register(&pe547391eb9_golang_TestClasses{})
-    inst.register(&pe547391eb9_golang_Tester{})
+    inst.register(&p586008acad_driver_RedisDriver{})
 
 
     return nil

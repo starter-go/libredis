@@ -4,26 +4,26 @@
         "sources": [
             {
                 "id": "lib",
-                "path": "src/lib",
+                "path": "src/main/golang",
                 "r": true
             },
             {
                 "id": "test",
-                "path": "src/test",
+                "path": "src/test/golang",
                 "r": true
             }
         ],
         "destinations": [
             {
                 "id": "lib",
-                "path": "gen/gen4lib",
+                "path": "gen/lib4libredis",
                 "sources": [
                     "lib"
                 ]
             },
             {
                 "id": "test",
-                "path": "gen/gen4test",
+                "path": "gen/test4libredis",
                 "sources": [
                     "test"
                 ]
